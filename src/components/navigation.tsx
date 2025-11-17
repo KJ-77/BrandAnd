@@ -1,32 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo-01.png";
 
 export function Navigation() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
-      <nav className="container mx-auto px-6 py-5 flex items-center justify-between">
+    //add fixed position to header to get sticky effect
+    <header className="top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
+      <nav className="w-full px-8 lg:px-12 py-12 lg:py-16 flex items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-serif font-bold tracking-tight hover:opacity-80 transition-opacity">
-          brand<span className="font-light">&</span>
+        <Link to="/" className="hover:opacity-80 transition-opacity mr-auto">
+          <img src={logo} alt="Brand& Logo" className="h-12 lg:h-14 w-auto" />
         </Link>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-12">
+        <div className="flex items-center gap-8 lg:gap-10 pr-8 lg:pr-12">
           <Link
             to="/portfolio"
-            className="text-base font-normal hover:opacity-60 transition-opacity"
+            className="text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity"
           >
             Portfolio
           </Link>
           <Link
             to="/about"
-            className="text-base font-normal hover:opacity-60 transition-opacity"
+            className="text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity"
           >
             About
           </Link>
           <Link
             to="/contact"
-            className="text-base font-normal hover:opacity-60 transition-opacity"
+            className="text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity"
           >
             Contact
           </Link>
@@ -34,7 +36,7 @@ export function Navigation() {
           {/* Request Button */}
           <Button
             variant="outline"
-            className="ml-4 px-8 py-2 border-gray-300 hover:bg-gray-50"
+            className="ml-6 px-12 py-6 text-lg border-gray-300 hover:bg-gray-50"
             asChild
           >
             <Link to="/request">REQUEST</Link>

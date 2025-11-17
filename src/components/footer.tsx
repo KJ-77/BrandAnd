@@ -4,7 +4,7 @@ import magazineMockup from "@/assets/magazine-mockup.webp";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-950 text-white">
+    <footer className="bg-gradient-to-t from-[#191c19] to-black text-white">
       {/* Top Section - Large Nav Items */}
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="flex flex-col items-center gap-8 lg:gap-12">
