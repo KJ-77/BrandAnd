@@ -1,22 +1,89 @@
 import { Link } from "react-router-dom";
 import iphoneMockup from "@/assets/iphone-mockup.webp";
 import magazineMockup from "@/assets/magazine-mockup.webp";
+import { useEffect, useRef, useState } from "react";
 
 export function Footer() {
+  const [projectsVisible, setProjectsVisible] = useState(false);
+  const [servicesVisible, setServicesVisible] = useState(false);
+  const [stayConnectedVisible, setStayConnectedVisible] = useState(false);
+
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const stayConnectedRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const projectsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setProjectsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const servicesObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setServicesVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const stayConnectedObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStayConnectedVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (projectsRef.current) {
+      projectsObserver.observe(projectsRef.current);
+    }
+
+    if (servicesRef.current) {
+      servicesObserver.observe(servicesRef.current);
+    }
+
+    if (stayConnectedRef.current) {
+      stayConnectedObserver.observe(stayConnectedRef.current);
+    }
+
+    return () => {
+      if (projectsRef.current) {
+        projectsObserver.unobserve(projectsRef.current);
+      }
+      if (servicesRef.current) {
+        servicesObserver.unobserve(servicesRef.current);
+      }
+      if (stayConnectedRef.current) {
+        stayConnectedObserver.unobserve(stayConnectedRef.current);
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-gradient-to-t from-[#191c19] to-black text-white">
       {/* Top Section - Large Nav Items */}
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="flex flex-col items-center gap-8 lg:gap-12">
           {/* Projects | Image | Team Row */}
-          <div className="flex items-center gap-3 lg:gap-4 lg:-ml-32">
+          <div
+            ref={projectsRef}
+            className={`flex items-center gap-3 lg:gap-4 lg:-ml-32 transition-all duration-1000 ${
+              projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <Link
               to="/projects"
               className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               PROJECTS
             </Link>
-            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm flex-shrink-0">
+            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
               <img
                 src={iphoneMockup}
                 alt="Projects"
@@ -32,14 +99,19 @@ export function Footer() {
           </div>
 
           {/* Services Row */}
-          <div className="flex items-center gap-3 lg:gap-4 lg:ml-48">
+          <div
+            ref={servicesRef}
+            className={`flex items-center gap-3 lg:gap-4 lg:ml-48 transition-all duration-1000 ${
+              servicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <Link
               to="/services"
               className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               SERVICES
             </Link>
-            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm flex-shrink-0">
+            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
               <img
                 src={magazineMockup}
                 alt="Services"
@@ -66,7 +138,12 @@ export function Footer() {
       </div>
 
       {/* Bottom Section - Links & Social */}
-      <div className="px-6 lg:px-16 pt-12 lg:pt-16 pb-20 lg:pb-32">
+      <div
+        ref={stayConnectedRef}
+        className={`px-6 lg:px-16 pt-12 lg:pt-16 pb-20 lg:pb-32 transition-all duration-1000 ${
+          stayConnectedVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Stay Connected */}
           <div className="lg:col-span-4">
