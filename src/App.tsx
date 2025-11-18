@@ -1,18 +1,22 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navigation } from "./components/navigation";
+import { Footer } from "./components/footer";
 import Home from "./pages/home";
-// import Navbar from "./components/navbar";
-
+import Portfolio from "./pages/portfolio";
 
 const App = () => {
   return (
     <Router>
+      <div className="min-h-screen bg-white">
+        <Navigation />
         <Routes>
-
-          <Route path="/" element= {<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           {/* <Route path="/*" element={<NotFoundPage />} /> */}
         </Routes>
-
-      </Router>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
