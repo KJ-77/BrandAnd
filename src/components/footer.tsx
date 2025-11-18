@@ -66,7 +66,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-t from-[#191c19] to-black text-white">
+    <footer className="bg-gradient-to-t from-[#191c19] via-[#191c19] via-70% to-black text-white">
       {/* Top Section - Large Nav Items */}
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="flex flex-col items-center gap-8 lg:gap-12">
@@ -146,7 +146,7 @@ export function Footer() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Stay Connected */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-6">
             <h3 className="text-3xl lg:text-4xl xl:text-7xl font-medium">
               stay connected
             </h3>

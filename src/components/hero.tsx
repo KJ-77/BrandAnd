@@ -1,21 +1,32 @@
-import heroBg from "@/assets/herobg.webp";
+import heroBg from "@/assets/herobg.jpg";
 import { ServicesAccordion } from "@/components/services-accordion";
 
 export function Hero() {
   return (
-    <section
-      className="min-h-screen pt-80 lg:pt-96 pb-64 lg:pb-80 pl-8 lg:pl-16 pr-6 bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: 'calc(100% + 0px) calc(0% - 150px)' }}
-    >
-      <div className="max-w-lg lg:max-w-xl xl:max-w-2xl">
-        {/* Headline */}
-        <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight tracking-tight mb-48">
-          We're here for brands that stand for something — those who care
-          about craft, culture, and people.
-        </h1>
+    <section className="min-h-screen pt-32 lg:pt-40 pb-20 lg:pb-32 px-4 lg:px-8">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6 lg:gap-8 items-start">
+          {/* Text Content - Left Column */}
+          <div className="order-2 lg:order-1 space-y-12 lg:space-y-16">
+            {/* Headline */}
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold leading-snug tracking-tight">
+              We're here for brands that stand for something — those who care
+              about craft, culture, and people.
+            </h1>
 
-        {/* Services Accordion */}
-        <ServicesAccordion />
+            {/* Services Accordion */}
+            <ServicesAccordion />
+          </div>
+
+          {/* Image - Right Column */}
+          <div className="order-1 lg:order-2">
+            <img
+              src={heroBg}
+              alt="Hero background"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
