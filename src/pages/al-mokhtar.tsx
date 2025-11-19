@@ -145,37 +145,30 @@ export function AlMokhtar() {
   );
 
   return (
-    <div className="bg-black min-h-screen">
-      {/* Banner Section with Transparent Navbar Overlay */}
-      <section className="relative h-screen">
-        {/* Banner Image */}
-        <div className="absolute inset-0">
+    <div className="bg-white min-h-screen">
+      {/* Banner and Project Info Section - Full Viewport */}
+      <section className="min-h-screen flex flex-col">
+        {/* Banner Image - Behind Navbar */}
+        <div className="relative h-[45vh]">
           <img
             src={projectData.bannerImage}
             alt={projectData.title}
             className="w-full h-full object-cover"
           />
-          {/* Slight overlay for better text readability */}
+          {/* Slight overlay for better visual */}
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
-        {/* Note: Navigation component is rendered by parent layout */}
-      </section>
-
-      {/* Project Info Section */}
-      <section className="px-4 lg:px-16 xl:px-24 py-20">
-        <div
-          ref={contentRef}
-          className={`max-w-4xl transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
-        >
-          <h1 className="text-4xl lg:text-6xl font-medium text-white mb-6">
-            {projectData.title}
-          </h1>
-          <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
-            {projectData.description}
-          </p>
+        {/* Project Info - Centered Below Banner */}
+        <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
+          <div className="max-w-4xl text-center">
+            <h1 className="text-4xl lg:text-6xl font-medium text-black mb-6">
+              {projectData.title}
+            </h1>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+              {projectData.description}
+            </p>
+          </div>
         </div>
       </section>
 
