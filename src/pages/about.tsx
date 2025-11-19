@@ -87,12 +87,9 @@ export function AboutPage() {
       </section>
 
       {/* Branding Philosophy Section */}
-      <section
-        ref={philosophyRef}
-        className="min-h-screen px-4 lg:px-16 xl:px-24 py-20"
-      >
+      <section ref={philosophyRef} className="min-h-screen py-20">
         {/* Split Layout: Left (Image) and Right (Text) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 lg:px-16 xl:px-80 min-h-[150vh]">
           {/* Left Side - Chain Image at Bottom */}
           <div
             className={`relative flex items-end justify-start transition-all duration-1000 delay-200 ${
@@ -111,10 +108,30 @@ export function AboutPage() {
           </div>
 
           {/* Right Side - Three Paragraphs with Titles */}
-          <div className="space-y-24">
+          <div className="space-y-52 self-start">
             {/* Paragraph 1 */}
             <div
               className={`transition-all duration-1000 delay-300 ${
+                isPhilosophyVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-12"
+              }`}
+            >
+              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
+                Our Story
+              </h3>
+              <p className="text-xl lg:text-2xl text-white leading-relaxed w-[110%]">
+                Founded by <span className="font-bold">Lama Ramadan</span>,
+                Brand& is a Beirut-based branding studio driven by the power of
+                ideas that move people. With over a decade of experience across
+                industries, we've helped shape brands that honor their roots
+                while thriving in modern markets.
+              </p>
+            </div>
+
+            {/* Paragraph 2 */}
+            <div
+              className={`transition-all duration-1000 delay-500 ${
                 isPhilosophyVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -130,25 +147,6 @@ export function AboutPage() {
               </p>
             </div>
 
-            {/* Paragraph 2 */}
-            <div
-              className={`transition-all duration-1000 delay-500 ${
-                isPhilosophyVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-12"
-              }`}
-            >
-              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
-                Vision
-              </h3>
-              <p className="text-xl lg:text-2xl text-white leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-            </div>
-
             {/* Paragraph 3 */}
             <div
               className={`transition-all duration-1000 delay-700 ${
@@ -158,13 +156,16 @@ export function AboutPage() {
               }`}
             >
               <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
-                Approach
+                Purpose
               </h3>
-              <p className="text-xl lg:text-2xl text-white leading-relaxed">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+              <p className="text-xl  text-white leading-relaxed w-full">
+                We believe in{" "}
+                <span className="font-bold">clarity, honesty, and craft.</span>{" "}
+                <br />
+                Every project beginswith deep understanding of culture,
+                behavior, and emotion before it becomes design. We collaborate
+                closely with our clients, ensuring each brand we create feels
+                authentic, relevant, and beautifully timeless.
               </p>
             </div>
           </div>

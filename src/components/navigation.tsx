@@ -6,12 +6,18 @@ import logoWhite from "@/assets/logo-white.png";
 export function Navigation() {
   const location = useLocation();
   const isDarkPage = location.pathname === "/contact" || location.pathname === "/about";
-  const logo = isDarkPage ? logoWhite : logoDark;
+  const isProjectPage = location.pathname.startsWith("/projects/");
+  const isTransparent = isProjectPage;
+  const logo = isDarkPage || isTransparent ? logoWhite : logoDark;
 
   return (
     //add fixed position to header to get sticky effect
-    <header className={`top-0 left-0 right-0 z-50 backdrop-blur-sm ${
-      isDarkPage ? "bg-black" : "bg-white/95"
+    <header className={`fixed top-0 left-0 right-0 z-50 ${
+      isTransparent
+        ? "bg-transparent"
+        : isDarkPage
+          ? "bg-black backdrop-blur-sm"
+          : "bg-white/95 backdrop-blur-sm"
     }`}>
       <nav className="w-full px-8 lg:px-12 py-12 lg:py-16 flex items-center">
         {/* Logo */}
@@ -24,7 +30,7 @@ export function Navigation() {
           <Link
             to="/portfolio"
             className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
-              isDarkPage ? "text-white" : "text-black"
+              isDarkPage || isTransparent ? "text-white" : "text-black"
             }`}
           >
             Portfolio
@@ -32,7 +38,7 @@ export function Navigation() {
           <Link
             to="/about"
             className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
-              isDarkPage ? "text-white" : "text-black"
+              isDarkPage || isTransparent ? "text-white" : "text-black"
             }`}
           >
             About
@@ -40,7 +46,7 @@ export function Navigation() {
           <Link
             to="/contact"
             className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
-              isDarkPage ? "text-white" : "text-black"
+              isDarkPage || isTransparent ? "text-white" : "text-black"
             }`}
           >
             Contact
@@ -50,8 +56,8 @@ export function Navigation() {
           <Button
             variant="outline"
             className={`ml-6 px-12 py-6 text-lg ${
-              isDarkPage
-                ? "bg-black border-white text-white hover:bg-black/80"
+              isDarkPage || isTransparent
+                ? "bg-transparent border-white text-white hover:bg-white/10"
                 : "border-gray-300 hover:bg-gray-50"
             }`}
             asChild
