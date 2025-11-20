@@ -1,5 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 
+// ===== IMPORT YOUR PROJECT IMAGES HERE =====
+// Example imports:
+// import banner from "@/assets/projects/projectX/banner.webp";
+// import image1 from "@/assets/projects/projectX/image1.webp";
+// import image2 from "@/assets/projects/projectX/image2.webp";
+// ============================================
+
 // Type definitions for project data
 interface ProjectImage {
   src: string;
@@ -20,16 +27,13 @@ const projectData: ProjectData = {
   title: "Project Name",
   description:
     "This is a brief description of the project. Replace this with actual project details.",
-  bannerImage: "/path/to/banner-image.jpg",
+  bannerImage: "", // Use imported banner image: bannerImage: banner,
   images: [
-    // Example layout matching the reference image
-    { src: "/path/to/image1.jpg", alt: "Image 1", rowSpan: 4, column: 1 },
-    { src: "/path/to/image2.jpg", alt: "Image 2", rowSpan: 2, column: 2 },
-    { src: "/path/to/image3.jpg", alt: "Image 3", rowSpan: 5, column: 1 },
-    { src: "/path/to/image4.jpg", alt: "Image 4", rowSpan: 3, column: 2 },
-    { src: "/path/to/image5.jpg", alt: "Image 5", rowSpan: 2, column: 2 },
-    { src: "/path/to/image6.jpg", alt: "Image 6", rowSpan: 3, column: 1 },
-    { src: "/path/to/image7.jpg", alt: "Image 7", rowSpan: 4, column: 2 },
+    // Example layout - use imported images:
+    // { src: image1, alt: "Image 1", rowSpan: 4, column: 1 },
+    // { src: image2, alt: "Image 2", rowSpan: 2, column: 2 },
+    // { src: image3, alt: "Image 3", rowSpan: 5, column: 1 },
+    // { src: image4, alt: "Image 4", rowSpan: 3, column: 2 },
   ],
 };
 // ============================================
@@ -94,7 +98,7 @@ export function ProjectTemplate() {
       </section>
 
       {/* Project Images Grid - Two Column Masonry Layout */}
-      <section className="px-4 lg:px-16 xl:px-24 pb-20">
+      <section ref={contentRef} className="px-4 lg:px-16 xl:px-24 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

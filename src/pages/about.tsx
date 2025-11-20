@@ -108,7 +108,7 @@ export function AboutPage() {
           </div>
 
           {/* Right Side - Three Paragraphs with Titles */}
-          <div className="space-y-52 self-start">
+          <div className="space-y-40 self-start">
             {/* Paragraph 1 */}
             <div
               className={`transition-all duration-1000 delay-300 ${

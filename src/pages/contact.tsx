@@ -129,7 +129,7 @@ export function ContactPage() {
         className="min-h-screen px-4 lg:px-8 py-20 lg:py-32"
       >
         <div
-          className={`max-w-7xl mx-auto transition-all duration-1000 ${
+          className={`max-w-[90%] mx-auto transition-all duration-1000 ${
             isFormVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
@@ -138,14 +138,14 @@ export function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left Column - Heading and Contact Info */}
             <div className="space-y-16 lg:space-y-32">
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight">
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl text-white leading-tight font-medium">
                 Interested in
                 <br />
                 collaborating?
               </h2>
 
               {/* Contact Information */}
-              <div className="space-y-4 text-white text-lg lg:text-xl">
+              <div className="space-y-4 text-white text-lg lg:text-2xl pt-40">
                 <p>Rue du Liban, Ashrafieh Beirut Lebanon</p>
                 <p>m: +961 3 667160</p>
                 <p>e: lama@brandandand.group</p>
