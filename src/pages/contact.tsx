@@ -114,8 +114,8 @@ export function ContactPage() {
             <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Contact Heading Overlapping Bottom */}
-            <div className="absolute bottom-0 left-0 right-0 pb-8 lg:pb-12 px-6 lg:px-8 z-10">
-              <h1 className="text-6xl lg:text-8xl xl:text-9xl font-light text-white lowercase tracking-tight">
+            <div className="absolute bottom-0 left-0 right-0 pb-8 lg:pb-12 z-10">
+              <h1 className="text-[7.4rem] sm:text-[11.7rem] md:text-[11.7rem] lg:text-[11.7rem] xl:text-[11.7rem] font-light text-white lowercase w-full leading-none">
                 contact
               </h1>
             </div>
