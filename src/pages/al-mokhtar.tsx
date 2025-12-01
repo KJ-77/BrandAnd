@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { ProjectNavigation } from "@/components/project-navigation";
 
 // Import images
 import banner1 from "@/assets/projects/project1/banner1.webp";
@@ -215,6 +216,9 @@ export function AlMokhtar() {
           </div>
         </div>
       </section>
+
+      {/* Project Navigation */}
+      <ProjectNavigation nextProject="/right" />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { ProjectNavigation } from "@/components/project-navigation";
 
 // ===== IMPORT YOUR PROJECT IMAGES HERE =====
 // Example imports:
@@ -157,6 +158,9 @@ export function ProjectTemplate() {
           </div>
         </div>
       </section>
+
+      {/* Project Navigation */}
+      <ProjectNavigation previousProject="/left" nextProject="/right" />
     </div>
   );
 }

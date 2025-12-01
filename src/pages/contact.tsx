@@ -168,7 +168,7 @@ export function ContactPage() {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none"
+                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                       />
                     </div>
                     <div className="space-y-2">
@@ -178,7 +178,7 @@ export function ContactPage() {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none"
+                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                       />
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none w-full"
+                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none w-full hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                   />
                 </div>
 
@@ -208,7 +208,7 @@ export function ContactPage() {
                     value={formData.interest}
                     onValueChange={handleSelectChange}
                   >
-                    <SelectTrigger className="bg-[#3a3a3a] border-none text-white h-12 rounded-none w-full">
+                    <SelectTrigger className="bg-[#3a3a3a] border-none text-white h-12 rounded-none w-full hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300">
                       <SelectValue placeholder="Select an option" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#3a3a3a] border-zinc-700 text-white rounded-none">
@@ -238,7 +238,7 @@ export function ContactPage() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 min-h-[200px] resize-none rounded-none"
+                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 min-h-[200px] resize-none rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                   />
                 </div>
 

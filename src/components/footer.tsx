@@ -146,10 +146,24 @@ export function Footer() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Stay Connected */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 space-y-6">
             <h3 className="text-3xl lg:text-4xl xl:text-7xl font-medium">
               stay connected
             </h3>
+
+            {/* Google Maps Embed */}
+            <div className="w-full h-64 lg:h-80 rounded-sm overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4126.949063948506!2d35.50835037570961!3d33.89199827321775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDUzJzMxLjIiTiAzNcKwMzAnMzkuMyJF!5e1!3m2!1sen!2slb!4v1764598616108!5m2!1sen!2slb"
+                width="70%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Brand& Location - Rue du Liban, Ashrafieh Beirut Lebanon"
+              ></iframe>
+            </div>
           </div>
 
           {/* Navigation Links */}
