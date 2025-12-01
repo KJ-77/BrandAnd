@@ -19,7 +19,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     image: AlMukhtarImage,
-    title: "Al Mukhtar",
+    title: "Al Mukhtar - UAE",
     link: "/",
   },
   {

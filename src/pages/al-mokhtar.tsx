@@ -29,7 +29,7 @@ interface ProjectData {
 
 // ===== AL MOKHTAR PROJECT DATA =====
 const projectData: ProjectData = {
-  title: "Al Mokhtar",
+  title: "Al Mukhtar - UAE",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   bannerImage: banner1,
@@ -144,10 +144,11 @@ export function AlMokhtar() {
         {/* Project Info - Centered Below Banner */}
         <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-6xl font-medium text-black mb-6">
+            <h1 className="text-4xl lg:text-4xl font-medium text-black mb-6">
               {projectData.title}
             </h1>
-            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+            <div className = "h-6"></div>
+            <p className="text-lg lg:text-lg text-gray-700 leading-relaxed">
               {projectData.description}
             </p>
           </div>
