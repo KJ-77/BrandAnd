@@ -19,7 +19,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     image: AlMukhtarImage,
-    title: "Al Mukhtar",
+    title: "Al Mukhtar - UAE",
     link: "/",
   },
   {
@@ -129,8 +129,9 @@ const Portfolio = () => {
   return (
     <div className="w-full">
       {/* Portfolio Title */}
-      <h1 className="text-4xl py-12 text-center">PORTFOLIO</h1>
-
+      <div className="h-[503.19px] pt-32 flex items-center justify-center">
+      <h1 className="text-4xl py-12 text-center font-medium">PORTFOLIO</h1>
+      </div>
       {/* Portfolio Layout */}
       <div
         ref={firstRowRef}

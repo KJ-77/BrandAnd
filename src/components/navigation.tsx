@@ -12,14 +12,14 @@ export function Navigation() {
 
   return (
     //add fixed position to header to get sticky effect
-    <header className={`fixed top-0 left-0 right-0 z-50 ${
+    <header className={`top-0 left-0 right-0 z-50 ${
       isTransparent
-        ? "bg-transparent"
+        ? "bg-transparent absolute"
         : isDarkPage
           ? "bg-black backdrop-blur-sm"
           : "bg-white/95 backdrop-blur-sm"
     }`}>
-      <nav className="w-full px-8 lg:px-12 py-12 lg:py-16 flex items-center">
+      <nav className="w-full px-8 lg:px-[41.725px] py-12 lg:py-[43.394px] flex items-center font-['Titillium_Web']">
         {/* Logo */}
         <Link to="/" className="hover:opacity-80 transition-opacity mr-auto">
           <img src={logo} alt="Brand& Logo" className="h-12 lg:h-14 w-auto" />

@@ -1,5 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
+// Import images
+import banner1 from "@/assets/projects/project1/banner1.webp";
+import image001 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_001_1.webp";
+import image060 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_060_1.webp";
+import image071 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_071_1.webp";
+import trayMockup1 from "@/assets/projects/project1/Free_Food_Tray_Mockup_1.webp";
+import image025 from "@/assets/projects/project1/Al_Muhtar_backery_BeARTpro_025_1.webp";
+import image068 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_068_1.webp";
+import image069 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_069_1.webp";
+import image073 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_073_1.webp";
+import trayMockup2 from "@/assets/projects/project1/Free_Food_Tray_Mockup_2.webp";
+
 // Type definitions for project data
 interface ProjectImage {
   src: string;
@@ -17,47 +29,32 @@ interface ProjectData {
 
 // ===== AL MOKHTAR PROJECT DATA =====
 const projectData: ProjectData = {
-  title: "Al Mokhtar",
+  title: "Al Mukhtar - UAE",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  bannerImage: new URL(
-    "@/assets/projects/project1/banner1.webp",
-    import.meta.url
-  ).href,
+  bannerImage: banner1,
   images: [
     // Left column
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_001_1.webp",
-        import.meta.url
-      ).href,
+      src: image001,
       alt: "Al Mokhtar Bakery Interior",
       rowSpan: 4,
       column: 1,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_060_1.webp",
-        import.meta.url
-      ).href,
+      src: image060,
       alt: "Al Mokhtar Bakery Display",
       rowSpan: 3,
       column: 1,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_071_1.webp",
-        import.meta.url
-      ).href,
+      src: image071,
       alt: "Al Mokhtar Bakery Detail",
       rowSpan: 4,
       column: 1,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Free_Food_Tray_Mockup_1.webp",
-        import.meta.url
-      ).href,
+      src: trayMockup1,
       alt: "Food Tray Mockup",
       rowSpan: 3,
       column: 1,
@@ -65,46 +62,31 @@ const projectData: ProjectData = {
 
     // Right column
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Muhtar_backery_BeARTpro_025_1.webp",
-        import.meta.url
-      ).href,
+      src: image025,
       alt: "Al Mokhtar Bakery Exterior",
       rowSpan: 3,
       column: 2,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_068_1.webp",
-        import.meta.url
-      ).href,
+      src: image068,
       alt: "Al Mokhtar Bakery Counter",
       rowSpan: 4,
       column: 2,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_069_1.webp",
-        import.meta.url
-      ).href,
+      src: image069,
       alt: "Al Mokhtar Bakery Products",
       rowSpan: 3,
       column: 2,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_073_1.webp",
-        import.meta.url
-      ).href,
+      src: image073,
       alt: "Al Mokhtar Bakery Branding",
       rowSpan: 2,
       column: 2,
     },
     {
-      src: new URL(
-        "@/assets/projects/project1/Free_Food_Tray_Mockup_2.webp",
-        import.meta.url
-      ).href,
+      src: trayMockup2,
       alt: "Food Tray Mockup 2",
       rowSpan: 3,
       column: 2,
@@ -162,10 +144,11 @@ export function AlMokhtar() {
         {/* Project Info - Centered Below Banner */}
         <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-6xl font-medium text-black mb-6">
+            <h1 className="text-4xl lg:text-4xl font-medium text-black mb-6">
               {projectData.title}
             </h1>
-            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+            <div className = "h-6"></div>
+            <p className="text-lg lg:text-lg text-gray-700 leading-relaxed">
               {projectData.description}
             </p>
           </div>
@@ -173,7 +156,7 @@ export function AlMokhtar() {
       </section>
 
       {/* Project Images Grid - Two Column Masonry Layout */}
-      <section className="px-4 lg:px-16 xl:px-24 pb-20">
+      <section ref={contentRef} className="px-4 lg:px-16 xl:px-24 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
