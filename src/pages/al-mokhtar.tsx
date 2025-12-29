@@ -1,4 +1,17 @@
 import { useEffect, useRef, useState } from "react";
+import { ProjectNavigation } from "@/components/project-navigation";
+
+// Import images
+import banner1 from "@/assets/projects/project1/banner1.webp";
+import image001 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_001_1.webp";
+import image060 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_060_1.webp";
+import image071 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_071_1.webp";
+import trayMockup1 from "@/assets/projects/project1/Free_Food_Tray_Mockup_1.webp";
+import image025 from "@/assets/projects/project1/Al_Muhtar_backery_BeARTpro_025_1.webp";
+import image068 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_068_1.webp";
+import image069 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_069_1.webp";
+import image073 from "@/assets/projects/project1/Al_Mukhtar_Bakery_BeARTpro_073_1.webp";
+import trayMockup2 from "@/assets/projects/project1/Free_Food_Tray_Mockup_2.webp";
 
 // Import images
 import banner1 from "@/assets/projects/project1/banner1.webp";
@@ -215,6 +228,9 @@ export function AlMokhtar() {
           </div>
         </div>
       </section>
+
+      {/* Project Navigation */}
+      <ProjectNavigation nextProject="/right" />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Portfolio from "./pages/portfolio";
 import { ContactPage } from "./pages/contact";
 import { AboutPage } from "./pages/about";
 import { AlMokhtar } from "./pages/al-mokhtar";
+import { NotFoundPage } from "./pages/not-found";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects/al-mokhtar" element={<AlMokhtar />} />
-          {/* <Route path="/*" element={<NotFoundPage />} /> */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>

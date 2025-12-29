@@ -114,8 +114,8 @@ export function ContactPage() {
             <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Contact Heading Overlapping Bottom */}
-            <div className="absolute bottom-0 left-0 right-0 pb-8 lg:pb-12 px-6 lg:px-8 z-10">
-              <h1 className="text-6xl lg:text-8xl xl:text-9xl font-light text-white lowercase tracking-tight">
+            <div className="absolute bottom-0 left-0 right-0 pb-8 lg:pb-12 z-10">
+              <h1 className="text-[7.4rem] sm:text-[11.7rem] md:text-[11.7rem] lg:text-[11.7rem] xl:text-[11.7rem] font-light text-white lowercase w-full leading-none">
                 contact
               </h1>
             </div>
@@ -168,7 +168,7 @@ export function ContactPage() {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none"
+                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                       />
                     </div>
                     <div className="space-y-2">
@@ -178,7 +178,7 @@ export function ContactPage() {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none"
+                        className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                       />
                     </div>
                   </div>
@@ -195,7 +195,7 @@ export function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none w-full"
+                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 h-12 rounded-none w-full hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                   />
                 </div>
 
@@ -208,7 +208,7 @@ export function ContactPage() {
                     value={formData.interest}
                     onValueChange={handleSelectChange}
                   >
-                    <SelectTrigger className="bg-[#3a3a3a] border-none text-white h-12 rounded-none w-full">
+                    <SelectTrigger className="bg-[#3a3a3a] border-none text-white h-12 rounded-none w-full hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300">
                       <SelectValue placeholder="Select an option" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#3a3a3a] border-zinc-700 text-white rounded-none">
@@ -238,7 +238,7 @@ export function ContactPage() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 min-h-[200px] resize-none rounded-none"
+                    className="bg-[#3a3a3a] border-none text-white placeholder:text-gray-500 min-h-[200px] resize-none rounded-none hover:bg-[#4a4a4a] hover:ring-2 hover:ring-white transition-all duration-300"
                   />
                 </div>
 
