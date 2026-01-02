@@ -20,7 +20,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     image: AlMukhtarImage,
     title: "Al Mukhtar - UAE",
-    link: "/",
+    link: "/projects/al-mokhtar",
   },
   {
     id: 2,
@@ -130,7 +130,7 @@ const Portfolio = () => {
     <div className="w-full">
       {/* Portfolio Title */}
       <div className="h-[503.19px] pt-32 flex items-center justify-center">
-      <h1 className="text-4xl py-12 text-center font-medium">PORTFOLIO</h1>
+      <h1 className="text-4xl py-12 text-center font-normal">PORTFOLIO</h1>
       </div>
       {/* Portfolio Layout */}
       <div

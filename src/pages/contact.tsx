@@ -138,7 +138,7 @@ export function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left Column - Heading and Contact Info */}
             <div className="space-y-16 lg:space-y-32">
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl text-white leading-tight font-medium">
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl text-white leading-tight font-normal font-serif">
                 Interested in
                 <br />
                 collaborating?

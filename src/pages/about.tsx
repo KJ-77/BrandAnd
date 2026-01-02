@@ -117,7 +117,7 @@ export function AboutPage() {
                   : "opacity-0 translate-y-12"
               }`}
             >
-              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
+              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide font-extrabold">
                 Our Story
               </h3>
               <p className="text-xl lg:text-2xl text-white leading-relaxed w-[110%]">
@@ -137,10 +137,10 @@ export function AboutPage() {
                   : "opacity-0 translate-y-12"
               }`}
             >
-              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
+              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide font-extrabold">
                 BRANDING PHILOSOPHY
               </h3>
-              <p className="text-3xl lg:text-4xl font-medium text-white leading-tight">
+              <p className="text-3xl lg:text-4xl font-normal font-serif text-white leading-tight">
                 Our approach goes beyond visuals, we uncover what makes each
                 brand truly distinct and translate it into a living identity
                 that inspires connection.
@@ -155,7 +155,7 @@ export function AboutPage() {
                   : "opacity-0 translate-y-12"
               }`}
             >
-              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide">
+              <h3 className="text-base lg:text-xl text-gray-300 mb-6 tracking-wide font-extrabold">
                 Purpose
               </h3>
               <p className="text-xl  text-white leading-relaxed w-full">

@@ -145,7 +145,7 @@ export function AlMokhtar() {
         {/* Project Info - Centered Below Banner */}
         <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-4xl font-medium text-black mb-6">
+            <h1 className="text-4xl lg:text-4xl font-normal text-black mb-6">
               {projectData.title}
             </h1>
             <div className = "h-6"></div>

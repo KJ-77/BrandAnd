@@ -147,7 +147,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Stay Connected */}
           <div className="lg:col-span-6 space-y-6">
-            <h3 className="text-3xl lg:text-4xl xl:text-7xl font-medium">
+            <h3 className="text-3xl lg:text-4xl xl:text-7xl font-normal font-serif">
               stay connected
             </h3>
 
@@ -209,7 +209,7 @@ export function Footer() {
           </div>
           {/* Footer Credit */}
           <div className="lg:col-span-3 lg:col-start-9 mt-8 lg:mt-12">
-            <p className="text-sm lg:text-base text-white font-medium">designed by brand&</p>
+            <p className="text-sm lg:text-base text-white font-bold">designed by brand&</p>
           </div>
         </div>
       </div>

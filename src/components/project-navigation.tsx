@@ -20,7 +20,7 @@ export function ProjectNavigation({ previousProject, nextProject }: ProjectNavig
               <div className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-black group-hover:bg-black group-hover:text-white transition-all">
                 <ChevronLeft className="w-6 h-6" />
               </div>
-              <span className="text-sm font-medium hidden sm:inline">Previous Project</span>
+              <span className="text-sm font-bold hidden sm:inline">Previous Project</span>
             </Link>
           ) : (
             <div className="w-12 h-12"></div> // Spacer when no previous project
@@ -32,7 +32,7 @@ export function ProjectNavigation({ previousProject, nextProject }: ProjectNavig
               to={nextProject}
               className="group flex items-center gap-2 text-gray-600 hover:text-black transition-all"
             >
-              <span className="text-sm font-medium hidden sm:inline">Next Project</span>
+              <span className="text-sm font-bold hidden sm:inline">Next Project</span>
               <div className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-black group-hover:bg-black group-hover:text-white transition-all">
                 <ChevronRight className="w-6 h-6" />
               </div>

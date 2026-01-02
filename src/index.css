@@ -4,9 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Rotis Font Families */
+
+/* Rotis Serif - Elegant serif for headings and brand statements */
 @font-face {
   font-family: 'Rotis Serif';
-  src: url('./assets/fonts/Rotis-Serif-font/Rotis Serif.ttf') format('truetype');
+  src: url('./assets/fonts/Rotis-Serif-font/RotisSerifStd.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,15 +16,32 @@
 
 @font-face {
   font-family: 'Rotis Serif';
-  src: url('./assets/fonts/Rotis-Serif-font/Rotis Serif-Bold.ttf') format('truetype');
-  font-weight: 700;
+  src: url('./assets/fonts/Rotis-Serif-font/RotisSerifStd-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Rotis Sans Serif - Modern sans-serif for body text and UI */
+@font-face {
+  font-family: 'Rotis Sans Serif';
+  src: url('./assets/fonts/rotissansserif/RotisSansSerifStd-Light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rotis Serif';
-  src: url('./assets/fonts/Rotis-Serif-font/Rotis Serif-Italic.ttf') format('truetype');
+  font-family: 'Rotis Sans Serif';
+  src: url('./assets/fonts/rotissansserif/RotisSansSerifStd-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rotis Sans Serif';
+  src: url('./assets/fonts/rotissansserif/RotisSansSerifStd-Italic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -30,8 +49,16 @@
 
 @font-face {
   font-family: 'Rotis Sans Serif';
-  src: url('./assets/fonts/rotissansserif/RotisSansSerif.ttf') format('truetype');
-  font-weight: 400;
+  src: url('./assets/fonts/rotissansserif/RotisSansSerifStd-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rotis Sans Serif';
+  src: url('./assets/fonts/rotissansserif/RotisSansSerifStd-ExtraBold.otf') format('opentype');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -147,11 +174,36 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Rotis Sans Serif', sans-serif;
+    font-weight: 300; /* Light weight for clean, airy body text */
   }
+
+  /* Headings use elegant Rotis Serif */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Rotis Serif', serif;
+    font-weight: 400; /* Regular weight */
+  }
+
+  /* Strong emphasis */
+  strong, b {
+    font-weight: 700; /* Bold */
+  }
+
+  /* Buttons and CTAs */
+  button {
+    font-family: 'Rotis Sans Serif', sans-serif;
+  }
+
+  /* Navigation links use light weight for modern feel */
+  nav a {
+    font-weight: 300;
+  }
+
+  /* Paragraphs with comfortable reading weight */
+  p {
+    font-weight: 300;
   }
 }

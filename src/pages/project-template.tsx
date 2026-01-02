@@ -95,7 +95,7 @@ export function ProjectTemplate() {
         {/* Project Info - Centered Below Banner */}
         <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-6xl font-medium text-black mb-6">
+            <h1 className="text-4xl lg:text-6xl font-normal text-black mb-6">
               {projectData.title}
             </h1>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
