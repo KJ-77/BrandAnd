@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import iphoneMockup from "@/assets/iphone-mockup.webp";
 import magazineMockup from "@/assets/magazine-mockup.webp";
 import { useEffect, useRef, useState } from "react";
+import { Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const [projectsVisible, setProjectsVisible] = useState(false);
@@ -78,7 +79,7 @@ export function Footer() {
             }`}
           >
             <Link
-              to="/projects"
+              to="/portfolio"
               className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               PROJECTS
@@ -91,7 +92,7 @@ export function Footer() {
               />
             </div>
             <Link
-              to="/team"
+              to="/about"
               className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               TEAM
@@ -106,7 +107,7 @@ export function Footer() {
             }`}
           >
             <Link
-              to="/services"
+              to="/"
               className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               SERVICES
@@ -167,7 +168,7 @@ export function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-9">
+          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-9 mt-24">
             <Link to="/" className="hover:text-white transition-colors">
               home
             </Link>
@@ -183,28 +184,25 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-11">
-            <a
-              href="mailto:hello@brandandco.com"
-              className="hover:text-white transition-colors"
-            >
-              email
-            </a>
+          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-11 mt-24">
+
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors flex items-center gap-2"
             >
-              instagram
+              <Instagram size={20} />
+              <span>instagram</span>
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors flex items-center gap-2"
             >
-              linkedin
+              <Linkedin size={20} />
+              <span>linkedin</span>
             </a>
           </div>
           {/* Footer Credit */}

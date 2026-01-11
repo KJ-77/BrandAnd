@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ProjectNavigation } from "@/components/project-navigation";
+import { Instagram } from "lucide-react";
 
 // ===== IMPORT YOUR PROJECT IMAGES HERE =====
 // Example imports:
@@ -101,6 +102,17 @@ export function ProjectTemplate() {
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
               {projectData.description}
             </p>
+            <div className="mt-8">
+              <a
+                href="https://www.instagram.com/your-project-instagram/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors rounded-none"
+              >
+                <Instagram size={20} />
+                <span>Follow on Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

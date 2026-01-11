@@ -62,19 +62,11 @@ export function Navigation() {
           >
             About
           </Link>
-          <Link
-            to="/contact"
-            className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
-              isDarkPage || isTransparent ? "text-white" : "text-black"
-            }`}
-          >
-            Contact
-          </Link>
 
           {/* Request Button */}
           <Button
             variant="outline"
-            className={`ml-6 px-12 py-6 text-lg transition-all duration-500 ${
+            className={`ml-6 px-8 py-6 text-lg rounded-none transition-all duration-500 ${
               isDarkPage || isTransparent
                 ? isScrolled
                   ? "bg-white text-black border-white hover:bg-white/90"
@@ -85,7 +77,7 @@ export function Navigation() {
             }`}
             asChild
           >
-            <Link to="/request">REQUEST</Link>
+            <Link to="/contact">REQUEST</Link>
           </Button>
         </div>
       </nav>
