@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { ProjectCarousel } from "@/components/project-carousel";
 import AlMukhtarImage from "@/assets/portfolio/AlMukhtar.webp";
 import FourFlagsImage from "@/assets/portfolio/Four_Flags_Mockup.webp";
 import BoxesMockupImage from "@/assets/portfolio/boxes-mockup.webp";
@@ -26,7 +27,7 @@ const portfolioItems: PortfolioItem[] = [
     id: 2,
     image: FourFlagsImage,
     title: "Valor Collective - London UK",
-    link: "/",
+    link: "/projects/valor",
   },
 ];
 
@@ -56,13 +57,13 @@ const thirdRowItems: PortfolioItem[] = [
     id: 6,
     image: FoodMockupImage,
     title: "Lovin'thyme - UK",
-    link: "/",
+    link: "/projects/lovin-thyme",
   },
   {
     id: 7,
     image: BoxesMockup2Image,
     title: "Mind Clinics - Lebanon",
-    link: "/",
+    link: "/projects/mind-clinics",
   },
 ];
 
@@ -224,7 +225,7 @@ const Portfolio = () => {
       {/* Third Row - Asymmetric Two Column Layout */}
       <div
         ref={thirdRowRef}
-        className="flex flex-col md:flex-row gap-0 w-full mb-48"
+        className="flex flex-col md:flex-row gap-0 w-full mb-32"
       >
         {/* Left - Food Mockup (50% width, 50% height) */}
         <div className="w-full md:w-1/2">
@@ -276,6 +277,9 @@ const Portfolio = () => {
           </Link>
         </div>
       </div>
+
+      {/* Remaining case studies, scrollable */}
+      <ProjectCarousel />
     </div>
   );
 };

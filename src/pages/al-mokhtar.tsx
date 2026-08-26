@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ProjectNavigation } from "@/components/project-navigation";
+import { getProjectNeighbors } from "@/lib/projects";
 import { Instagram } from "lucide-react";
 
 // Import images
@@ -100,6 +101,10 @@ const projectData: ProjectData = {
 export function AlMokhtar() {
   const [isVisible, setIsVisible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  // Previous/next come from the shared project order in src/lib/projects.ts
+  const { previous: previousProject, next: nextProject } =
+    getProjectNeighbors("al-mokhtar");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -230,7 +235,10 @@ export function AlMokhtar() {
       </section>
 
       {/* Project Navigation */}
-      <ProjectNavigation nextProject="/right" />
+      <ProjectNavigation
+        previousProject={previousProject}
+        nextProject={nextProject}
+      />
     </div>
   );
 }

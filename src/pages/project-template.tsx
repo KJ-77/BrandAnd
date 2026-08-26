@@ -1,185 +1,33 @@
-import { useEffect, useRef, useState } from "react";
-import { ProjectNavigation } from "@/components/project-navigation";
-import { Instagram } from "lucide-react";
+import { ProjectLayout, type ProjectData } from "@/components/project-layout";
 
 // ===== IMPORT YOUR PROJECT IMAGES HERE =====
-// Example imports:
 // import banner from "@/assets/projects/projectX/banner.webp";
 // import image1 from "@/assets/projects/projectX/image1.webp";
 // import image2 from "@/assets/projects/projectX/image2.webp";
-// ============================================
-
-// ===== IMPORT YOUR PROJECT IMAGES HERE =====
-// Example imports:
-// import banner from "@/assets/projects/projectX/banner.webp";
-// import image1 from "@/assets/projects/projectX/image1.webp";
-// import image2 from "@/assets/projects/projectX/image2.webp";
-// ============================================
-
-// Type definitions for project data
-interface ProjectImage {
-  src: string;
-  alt: string;
-  rowSpan: number; // How many grid rows this image should span (e.g., 2, 3, 4)
-  column: 1 | 2; // Which column: 1 for left, 2 for right
-}
-
-interface ProjectData {
-  title: string;
-  description: string;
-  bannerImage: string;
-  images: ProjectImage[];
-}
+// ===========================================
 
 // ===== UPDATE THIS DATA FOR EACH PROJECT =====
 const projectData: ProjectData = {
+  // Must match the slug registered in src/lib/projects.ts
+  slug: "project-slug",
   title: "Project Name",
+  // A string, or an array of strings for a multi-paragraph write-up
   description:
     "This is a brief description of the project. Replace this with actual project details.",
-  bannerImage: "", // Use imported banner image: bannerImage: banner,
+  bannerImage: "", // Use the imported banner image: bannerImage: banner,
+  // Optional - the follow button is hidden when this is left out
+  // instagram: "https://www.instagram.com/<handle>/",
   images: [
-    // Example layout - use imported images:
+    // Left column (column: 1) and right column (column: 2).
+    // rowSpan reserves ~150px per unit before the image loads - keep it at or
+    // below the image's real height so no empty gap appears underneath:
+    //   landscape 3:2 -> 2   landscape 4:3 -> 3   square -> 4   portrait -> 5
     // { src: image1, alt: "Image 1", rowSpan: 4, column: 1 },
     // { src: image2, alt: "Image 2", rowSpan: 2, column: 2 },
-    // { src: image3, alt: "Image 3", rowSpan: 5, column: 1 },
-    // { src: image4, alt: "Image 4", rowSpan: 3, column: 2 },
   ],
 };
-// ============================================
+// =============================================
 
 export function ProjectTemplate() {
-  const [isVisible, setIsVisible] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
-    }
-
-    return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
-      }
-    };
-  }, []);
-
-  // Separate images by column
-  const leftColumnImages = projectData.images.filter((img) => img.column === 1);
-  const rightColumnImages = projectData.images.filter(
-    (img) => img.column === 2
-  );
-
-  return (
-    <div className="bg-white min-h-screen">
-      {/* Banner and Project Info Section - Full Viewport */}
-      <section className="min-h-screen flex flex-col">
-        {/* Banner Image - Behind Navbar */}
-        <div className="relative h-[45vh]">
-          <img
-            src={projectData.bannerImage}
-            alt={projectData.title}
-            className="w-full h-full object-cover"
-          />
-          {/* Slight overlay for better visual */}
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
-
-        {/* Project Info - Centered Below Banner */}
-        <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24">
-          <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-6xl font-normal text-black mb-6">
-              {projectData.title}
-            </h1>
-            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-              {projectData.description}
-            </p>
-            <div className="mt-8">
-              <a
-                href="https://www.instagram.com/your-project-instagram/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors rounded-none"
-              >
-                <Instagram size={20} />
-                <span>Follow on Instagram</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Images Grid - Two Column Masonry Layout */}
-      <section ref={contentRef} className="px-4 lg:px-16 xl:px-24 pb-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Two Column Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            {/* Left Column */}
-            <div className="flex flex-col gap-4">
-              {leftColumnImages.map((image, index) => (
-                <div
-                  key={`left-${index}`}
-                  className={`transition-all duration-1000 delay-${
-                    index * 100
-                  } ${
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-12"
-                  }`}
-                  style={{
-                    // Use rowSpan to determine approximate height
-                    // Each rowSpan unit = ~150px (adjust as needed)
-                    minHeight: `${image.rowSpan * 150}px`,
-                  }}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Right Column */}
-            <div className="flex flex-col gap-4">
-              {rightColumnImages.map((image, index) => (
-                <div
-                  key={`right-${index}`}
-                  className={`transition-all duration-1000 delay-${
-                    (index + leftColumnImages.length) * 100
-                  } ${
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-12"
-                  }`}
-                  style={{
-                    // Use rowSpan to determine approximate height
-                    minHeight: `${image.rowSpan * 150}px`,
-                  }}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Navigation */}
-      <ProjectNavigation previousProject="/left" nextProject="/right" />
-    </div>
-  );
+  return <ProjectLayout project={projectData} />;
 }
