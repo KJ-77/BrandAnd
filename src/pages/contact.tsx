@@ -95,7 +95,7 @@ export function ContactPage() {
       {/* First Half - Hero Section with Brand Sign */}
       <section
         ref={sectionRef}
-        className="min-h-screen flex items-center justify-center px-4 lg:px-8 py-20"
+        className="min-h-screen flex items-center justify-center px-6 lg:px-8 py-section lg:py-section-lg"
       >
         <div
           className={`relative max-w-xl w-full transition-all duration-1000 ${
@@ -115,7 +115,8 @@ export function ContactPage() {
 
             {/* Contact Heading Overlapping Bottom */}
             <div className="absolute bottom-0 left-0 right-0 pb-8 lg:pb-12 z-10">
-              <h1 className="text-[7.4rem] sm:text-[11.7rem] md:text-[11.7rem] lg:text-[11.7rem] xl:text-[11.7rem] font-light text-white lowercase w-full leading-none">
+              {/* min(28vw, ...) keeps the word off the right edge on phones */}
+              <h1 className="text-[min(28vw,7.4rem)] sm:text-[11.7rem] font-light text-white lowercase w-full leading-none">
                 contact
               </h1>
             </div>
@@ -126,7 +127,7 @@ export function ContactPage() {
       {/* Second Half - Contact Form Section */}
       <section
         ref={formRef}
-        className="min-h-screen px-4 lg:px-8 py-20 lg:py-32"
+        className="min-h-screen px-6 lg:px-8 py-section lg:py-section-lg"
       >
         <div
           className={`max-w-[90%] mx-auto transition-all duration-1000 ${
@@ -135,9 +136,9 @@ export function ContactPage() {
               : "opacity-0 translate-y-12"
           }`}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-stack lg:gap-16">
             {/* Left Column - Heading and Contact Info */}
-            <div className="space-y-16 lg:space-y-32">
+            <div className="space-y-stack">
               <h2 className="text-4xl lg:text-5xl xl:text-6xl text-white leading-tight font-normal font-serif">
                 Interested in
                 <br />
@@ -145,7 +146,7 @@ export function ContactPage() {
               </h2>
 
               {/* Contact Information */}
-              <div className="space-y-4 text-white text-lg lg:text-2xl pt-40">
+              <div className="space-y-tight text-white text-lg lg:text-2xl">
                 <p>Rue du Liban, Ashrafieh Beirut Lebanon</p>
                 <p>m: +961 3 667160</p>
                 <p>e: lama@brandandand.group</p>

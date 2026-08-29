@@ -115,13 +115,12 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
         </div>
 
         {/* Project Info - Centered Below Banner */}
-        <div className="flex-1 flex items-center justify-center px-4 lg:px-16 xl:px-24 py-16">
+        <div className="flex-1 flex items-center justify-center px-6 lg:px-16 xl:px-24 py-section lg:py-section-lg">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl lg:text-4xl font-normal text-black mb-6">
+            <h1 className="text-4xl lg:text-4xl font-normal text-black mb-block">
               {project.title}
             </h1>
-            <div className="h-6"></div>
-            <div className="space-y-4">
+            <div className="space-y-tight">
               {paragraphs.map((paragraph, index) => (
                 <p
                   key={index}
@@ -132,7 +131,7 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
               ))}
             </div>
             {project.instagram && (
-              <div className="mt-8">
+              <div className="mt-block">
                 <a
                   href={project.instagram}
                   target="_blank"
@@ -149,7 +148,7 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
       </section>
 
       {/* Project Images Grid - Two Column Masonry Layout */}
-      <section ref={contentRef} className="px-4 lg:px-16 xl:px-24 pb-20">
+      <section ref={contentRef} className="px-6 lg:px-16 xl:px-24 pb-section lg:pb-section-lg">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Left Column */}

@@ -63,6 +63,29 @@
   font-display: swap;
 }
 
+/* ---------------------------------------------------------------------------
+   Spacing rhythm
+   One scale for the whole site so every section and every stack of content
+   breathes the same amount. Reach for these instead of ad-hoc values like
+   py-32 / space-y-40 / py-[20%], which is how the spacing drifted before.
+
+     *-tight    16px  image <-> its caption, label <-> its field
+     *-block    32px  heading <-> its body copy, items inside one block
+     *-stack    56px  between blocks inside a section
+     *-section  64px  section top/bottom padding on mobile
+     *-section-lg 96px section top/bottom padding on desktop (lg:py-section-lg)
+
+   Tailwind v4 turns any --spacing-* theme variable into the full set of
+   spacing utilities, so these work as p-*, m-*, gap-*, space-y-* and so on.
+--------------------------------------------------------------------------- */
+@theme {
+  --spacing-tight: 1rem;
+  --spacing-block: 2rem;
+  --spacing-stack: 3.5rem;
+  --spacing-section: 4rem;
+  --spacing-section-lg: 6rem;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

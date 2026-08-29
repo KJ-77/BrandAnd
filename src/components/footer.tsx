@@ -69,9 +69,10 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-t from-[#191c19] via-[#191c19] via-70% to-black text-white">
       {/* Top Section - Large Nav Items */}
-      <div className="container mx-auto px-6 py-16 lg:py-24">
-        <div className="flex flex-col items-center gap-8 lg:gap-12">
-          {/* Projects | Image | Team Row */}
+      <div className="container mx-auto px-6 py-section lg:py-section-lg">
+        <div className="flex flex-col items-center gap-block lg:gap-stack">
+          {/* Projects | Image | Team Row - the type scales down on small screens
+              so the row never runs past the edge of the phone */}
           <div
             ref={projectsRef}
             className={`flex items-center gap-3 lg:gap-4 lg:-ml-32 transition-all duration-1000 ${
@@ -80,11 +81,11 @@ export function Footer() {
           >
             <Link
               to="/portfolio"
-              className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               PROJECTS
             </Link>
-            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
+            <div className="w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
               <img
                 src={iphoneMockup}
                 alt="Projects"
@@ -93,7 +94,7 @@ export function Footer() {
             </div>
             <Link
               to="/about"
-              className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               TEAM
             </Link>
@@ -108,11 +109,11 @@ export function Footer() {
           >
             <Link
               to="/"
-              className="text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
               SERVICES
             </Link>
-            <div className="w-20 h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
+            <div className="w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 overflow-hidden rounded-sm shrink-0">
               <img
                 src={magazineMockup}
                 alt="Services"
@@ -122,7 +123,7 @@ export function Footer() {
           </div>
 
           {/* Email Us Button */}
-          <div className="pt-6">
+          <div>
             <Link
               to="/contact"
               className="inline-block border border-white/30 px-10 py-3 text-sm tracking-widest hover:bg-white/10 transition-colors uppercase"
@@ -141,13 +142,13 @@ export function Footer() {
       {/* Bottom Section - Links & Social */}
       <div
         ref={stayConnectedRef}
-        className={`px-6 lg:px-16 pt-12 lg:pt-16 pb-20 lg:pb-32 transition-all duration-1000 ${
+        className={`px-6 lg:px-16 py-section lg:py-section-lg transition-all duration-1000 ${
           stayConnectedVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-stack lg:gap-12 items-start">
           {/* Stay Connected */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-block">
             <h3 className="text-3xl lg:text-4xl xl:text-7xl font-normal font-serif">
               stay connected
             </h3>
@@ -156,8 +157,7 @@ export function Footer() {
             <div className="w-full h-64 lg:h-80 rounded-sm overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4126.949063948506!2d35.50835037570961!3d33.89199827321775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDUzJzMxLjIiTiAzNcKwMzAnMzkuMyJF!5e1!3m2!1sen!2slb!4v1764598616108!5m2!1sen!2slb"
-                width="70%"
-                height="100%"
+                className="w-full lg:w-[70%] h-full"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -167,8 +167,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-9 mt-24">
+          {/* Navigation Links - only offset down on desktop, where the column
+              sits beside the map instead of underneath it */}
+          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-9 lg:mt-24">
             <Link to="/" className="hover:text-white transition-colors">
               home
             </Link>
@@ -184,7 +185,7 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-11 mt-24">
+          <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-11 lg:mt-24">
 
             <a
               href="https://instagram.com"
@@ -206,7 +207,7 @@ export function Footer() {
             </a>
           </div>
           {/* Footer Credit */}
-          <div className="lg:col-span-3 lg:col-start-9 mt-8 lg:mt-12">
+          <div className="lg:col-span-3 lg:col-start-9 lg:mt-12">
             <p className="text-sm lg:text-base text-white font-bold">designed by brand&</p>
           </div>
         </div>

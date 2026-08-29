@@ -36,19 +36,19 @@ export function Navigation() {
             ? "bg-gray-100/60 backdrop-blur-sm shadow-lg shadow-black/5 border-b border-gray-200/50"
             : "bg-white/95 backdrop-blur-sm"
     }`}>
-      <nav className={`w-full px-8 lg:px-[41.725px] flex items-center transition-all duration-500 ${
-        isScrolled ? "py-4 lg:py-5" : "py-12 lg:py-[43.394px]"
+      <nav className={`w-full px-4 sm:px-6 lg:px-[41.725px] flex items-center transition-all duration-500 ${
+        isScrolled ? "py-3 lg:py-5" : "py-6 lg:py-[43.394px]"
       }`}>
-        {/* Logo */}
-        <Link to="/" className="hover:opacity-80 transition-opacity mr-auto">
-          <img src={logo} alt="Brand& Logo" className="h-12 lg:h-14 w-auto" />
+        {/* Logo - shrink-0 keeps it from being squeezed out on narrow phones */}
+        <Link to="/" className="hover:opacity-80 transition-opacity mr-auto shrink-0">
+          <img src={logo} alt="Brand& Logo" className="h-8 sm:h-11 lg:h-14 w-auto" />
         </Link>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-8 lg:gap-10 pr-8 lg:pr-12">
+        <div className="flex items-center gap-3 sm:gap-6 lg:gap-10 pr-0 sm:pr-4 lg:pr-12">
           <Link
             to="/portfolio"
-            className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
+            className={`text-sm sm:text-lg lg:text-2xl font-normal whitespace-nowrap hover:opacity-60 transition-opacity ${
               isDarkPage || isTransparent ? "text-white" : "text-black"
             }`}
           >
@@ -56,7 +56,7 @@ export function Navigation() {
           </Link>
           <Link
             to="/about"
-            className={`text-xl lg:text-2xl font-normal hover:opacity-60 transition-opacity ${
+            className={`text-sm sm:text-lg lg:text-2xl font-normal whitespace-nowrap hover:opacity-60 transition-opacity ${
               isDarkPage || isTransparent ? "text-white" : "text-black"
             }`}
           >
@@ -66,7 +66,7 @@ export function Navigation() {
           {/* Request Button */}
           <Button
             variant="outline"
-            className={`ml-6 px-8 py-6 text-lg rounded-none transition-all duration-500 ${
+            className={`ml-0 sm:ml-2 lg:ml-6 shrink-0 px-3 sm:px-6 lg:px-8 py-2 sm:py-4 lg:py-6 text-[11px] sm:text-sm lg:text-lg rounded-none transition-all duration-500 ${
               isDarkPage || isTransparent
                 ? isScrolled
                   ? "bg-white text-black border-white hover:bg-white/90"

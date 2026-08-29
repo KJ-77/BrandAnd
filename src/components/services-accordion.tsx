@@ -13,7 +13,7 @@ export function ServicesAccordion() {
             <AccordionTrigger className="text-2xl font-normal py-4 hover:no-underline font-serif">
               Brand Strategy
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 pb-4">
+            <AccordionContent className="text-base lg:text-lg text-gray-600 leading-relaxed pb-4">
               Strategic brand positioning, messaging, and planning to help your
               brand stand out in the market.
             </AccordionContent>
@@ -23,7 +23,7 @@ export function ServicesAccordion() {
             <AccordionTrigger className="text-2xl font-normal py-4 hover:no-underline font-serif">
               Brand Identity & Design
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 pb-4">
+            <AccordionContent className="text-base lg:text-lg text-gray-600 leading-relaxed pb-4">
               Comprehensive visual identity systems including logos, typography,
               color palettes, and brand guidelines.
             </AccordionContent>
@@ -33,7 +33,7 @@ export function ServicesAccordion() {
             <AccordionTrigger className="text-2xl font-normal py-4 hover:no-underline font-serif">
               Digital & Experience
             </AccordionTrigger>
-            <AccordionContent className="text-gray-600 pb-4">
+            <AccordionContent className="text-base lg:text-lg text-gray-600 leading-relaxed pb-4">
               Digital experiences that bring your brand to life through web design,
               user experience, and interactive solutions.
             </AccordionContent>

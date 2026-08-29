@@ -46,13 +46,13 @@ export function BrandSoul() {
 
   return (
     <section className="min-h-screen bg-white flex items-center justify-center">
-      <div className="w-full h-full flex items-center px-8 lg:px-16 py-8 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start w-full">
+      <div className="w-full h-full flex items-center px-6 lg:px-16 py-section lg:py-section-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-stack lg:gap-16 items-start w-full">
           {/* Left Column - Text Content */}
           <div className="w-full flex flex-col justify-start">
             <h2
               ref={titleRef}
-              className={`text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight tracking-tight mb-24 lg:mb-32 transition-all duration-1000 ${
+              className={`text-3xl lg:text-4xl xl:text-5xl font-normal leading-tight tracking-tight mb-block lg:mb-stack transition-all duration-1000 ${
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
@@ -83,7 +83,7 @@ export function BrandSoul() {
             <img
               src={riverboat}
               alt="Colorful garden illustration with riverboats"
-              className="w-full h-[100vh] object-cover"
+              className="w-full h-[60vh] lg:h-[100vh] object-cover"
               loading="lazy"
             />
           </div>

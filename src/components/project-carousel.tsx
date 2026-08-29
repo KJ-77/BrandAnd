@@ -70,10 +70,10 @@ export function ProjectCarousel() {
   };
 
   return (
-    <div ref={sectionRef} className="w-full px-[10%] pb-32">
+    <div ref={sectionRef} className="w-full px-6 md:px-[10%] pb-section lg:pb-section-lg">
       {/* Heading + arrows */}
       <div
-        className={`flex items-end justify-between mb-10 transition-all duration-1500 ${
+        className={`flex items-end justify-between mb-block transition-all duration-1500 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -123,7 +123,7 @@ export function ProjectCarousel() {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <div className="py-6 text-center bg-white">
+            <div className="py-tight md:py-6 text-center bg-white">
               <p className="text-base">{project.title}</p>
             </div>
           </Link>
