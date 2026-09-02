@@ -6,10 +6,62 @@ import { getProjectNeighbors } from "@/lib/projects";
 export interface ProjectImage {
   src: string;
   alt: string;
-  /** Vertical space reserved for the image before it loads (rowSpan * 150px). */
+  /**
+   * The image's rough shape, used only to reserve space while it loads.
+   * 2 = landscape, 3 = wide-ish landscape, 4 = square, 5 = portrait.
+   * It never sizes the loaded image - see PLACEHOLDER_ASPECT below.
+   */
   rowSpan: number;
   /** Which masonry column the image belongs to: 1 for left, 2 for right. */
   column: 1 | 2;
+}
+
+/**
+ * Placeholder proportions per `rowSpan`, fed to `aspect-ratio: auto <ratio>`.
+ * The `auto` keyword makes the browser prefer the image's own aspect ratio and
+ * fall back to this one only while the file has no intrinsic size - i.e. before
+ * it has loaded. So the space is reserved up front, the loaded image is never
+ * squeezed into it, and no JavaScript is needed to hand over between the two.
+ * Ratios rather than pixel heights on purpose: a fixed height is only ever right
+ * for one column width, which is what used to crop these images on phones.
+ */
+const PLACEHOLDER_ASPECT: Record<number, string> = {
+  2: "auto 3 / 2",
+  3: "auto 4 / 3",
+  4: "auto 1 / 1",
+  5: "auto 4 / 5",
+};
+
+/**
+ * One image in the masonry grid: a fade-in wrapper around an image that always
+ * renders at its natural aspect ratio, full width of its column.
+ */
+function ProjectImageTile({
+  image,
+  isVisible,
+  delayIndex,
+}: {
+  image: ProjectImage;
+  isVisible: boolean;
+  /** Position in the overall sequence - staggers the fade-in by 100ms steps. */
+  delayIndex: number;
+}) {
+  return (
+    <div
+      className={`transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      }`}
+      style={{ transitionDelay: `${delayIndex * 100}ms` }}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        className="w-full h-auto"
+        style={{ aspectRatio: PLACEHOLDER_ASPECT[image.rowSpan] ?? "auto 1 / 1" }}
+      />
+    </div>
+  );
 }
 
 export interface ProjectData {
@@ -70,40 +122,14 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
 
   const { previous, next } = getProjectNeighbors(project.slug);
 
-  // Shared renderer for both columns - `delayIndex` staggers the fade-in so the
-  // right column continues the sequence rather than restarting it
-  const renderImage = (
-    image: ProjectImage,
-    key: string,
-    delayIndex: number
-  ) => (
-    <div
-      key={key}
-      className={`transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-      }`}
-      style={{
-        // Reserve roughly the right height up front to limit layout shift.
-        // Each rowSpan unit = ~150px
-        minHeight: `${image.rowSpan * 150}px`,
-        transitionDelay: `${delayIndex * 100}ms`,
-      }}
-    >
-      <img
-        src={image.src}
-        alt={image.alt}
-        loading="lazy"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  );
-
   return (
     <div className="bg-white min-h-screen">
       {/* Banner and Project Info Section - Full Viewport */}
       <section className="min-h-screen flex flex-col">
-        {/* Banner Image - Behind Navbar */}
-        <div className="relative h-[45vh]">
+        {/* Banner Image - Behind Navbar. The one deliberate crop on the page:
+            banners are wide 5:1 strips, so the band gets shorter on narrow
+            screens to keep as much of the strip in frame as possible. */}
+        <div className="relative h-[32vh] sm:h-[40vh] lg:h-[45vh]">
           <img
             src={project.bannerImage}
             alt={project.title}
@@ -153,20 +179,27 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Left Column */}
             <div className="flex flex-col gap-4">
-              {leftColumnImages.map((image, index) =>
-                renderImage(image, `left-${index}`, index)
-              )}
+              {leftColumnImages.map((image, index) => (
+                <ProjectImageTile
+                  key={`left-${index}`}
+                  image={image}
+                  isVisible={isVisible}
+                  delayIndex={index}
+                />
+              ))}
             </div>
 
-            {/* Right Column */}
+            {/* Right Column - the delay carries on from the left column so the
+                two read as one sequence rather than two that restart */}
             <div className="flex flex-col gap-4">
-              {rightColumnImages.map((image, index) =>
-                renderImage(
-                  image,
-                  `right-${index}`,
-                  index + leftColumnImages.length
-                )
-              )}
+              {rightColumnImages.map((image, index) => (
+                <ProjectImageTile
+                  key={`right-${index}`}
+                  image={image}
+                  isVisible={isVisible}
+                  delayIndex={index + leftColumnImages.length}
+                />
+              ))}
             </div>
           </div>
         </div>

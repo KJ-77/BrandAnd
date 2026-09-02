@@ -173,7 +173,7 @@ export function Footer() {
             <Link to="/" className="hover:text-white transition-colors">
               home
             </Link>
-            <Link to="/projects" className="hover:text-white transition-colors">
+            <Link to="/portfolio" className="hover:text-white transition-colors">
               projects
             </Link>
             <Link to="/about" className="hover:text-white transition-colors">

@@ -66,20 +66,22 @@ const projectData: ProjectData = {
 For each image, specify:
 - `src`: the imported image
 - `alt`: alt text for accessibility
-- `rowSpan`: vertical space reserved before the image loads (2-5)
+- `rowSpan`: the image's rough shape, used to reserve space before it loads (2-5)
 - `column`: `1` for left, `2` for right
 
-**Picking rowSpan.** It sets a `min-height` of `rowSpan * 150px`. That is a
-*floor*, not a fixed height - the image still renders at its natural aspect ratio.
-So keep it at or below the height the image will actually occupy, otherwise an
-empty gap appears underneath it. In a ~630px-wide column:
+**Picking rowSpan.** Every grid image renders at its own natural aspect ratio,
+full width of its column - nothing is ever cropped or stretched, at any screen
+size. `rowSpan` only describes the shape of the *placeholder* held while the file
+downloads, via `aspect-ratio: auto <ratio>`; the moment the image arrives its own
+ratio takes over. Getting it slightly wrong costs a small scroll jump on load,
+nothing more.
 
-| Image shape        | rowSpan |
-|--------------------|---------|
-| landscape ~3:2     | 2       |
-| landscape ~4:3     | 3       |
-| square             | 4       |
-| portrait 4:5 - 2:3 | 5       |
+| Image shape        | rowSpan | Placeholder |
+|--------------------|---------|-------------|
+| landscape ~3:2     | 2       | 3 / 2       |
+| landscape ~4:3     | 3       | 4 / 3       |
+| square             | 4       | 1 / 1       |
+| portrait 4:5 - 2:3 | 5       | 4 / 5       |
 
 ### Step 6: Rename the Export
 ```typescript
@@ -100,7 +102,9 @@ In `src/App.tsx`:
 ### Creating Balanced Layouts
 - Distribute images evenly between the columns
 - Alternate between small and large images for visual interest
-- Keep the total rowSpan roughly equal per column so both columns end together
+- Balance the columns by *height*, not by image count: a column's height is the
+  sum of `width / aspect-ratio` for its images, so two portraits are worth about
+  three landscapes. The `rowSpan` totals are a decent proxy - keep them close
 
 ### Example Balanced Layout (7 images):
 ```typescript
@@ -129,8 +133,8 @@ In `src/App.tsx`:
 
 ## Common Issues
 
-**Empty gap under an image?**
-- Its `rowSpan` is taller than the image itself - lower it (see the table above)
+**Page jumps while images load?**
+- A `rowSpan` is far off the image's real shape - match it to the table above
 
 **Columns unbalanced?**
 - Count the total rowSpan per column and redistribute

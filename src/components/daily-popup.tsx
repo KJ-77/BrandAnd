@@ -6,6 +6,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import aboutUs from "@/assets/about/about-us.webp";
 
 export function DailyPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,27 +27,18 @@ export function DailyPopup() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       {/* No fixed height: the modal grows with its content and only scrolls once
           it would run past 85% of the screen, so nothing gets clipped. */}
-      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-3xl max-h-[85vh] overflow-y-auto p-0 bg-white border-gray-200">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          {/* Left Side - Image Placeholder.
-              Fixed aspect on mobile, full column height on desktop, so the
-              image is always fully contained instead of being cropped. */}
-          <div className="bg-gradient-to-br from-gray-100 to-gray-200 aspect-[16/9] md:aspect-auto md:h-full flex items-center justify-center p-tight">
-            {/* Placeholder for image */}
-            <div className="text-center text-gray-400">
-              <div className="text-4xl md:text-6xl mb-2 md:mb-4">🖼️</div>
-              <p className="text-sm">Image Placeholder</p>
-              <p className="text-xs mt-2">
-                Replace with actual image in src/components/daily-popup.tsx
-              </p>
-            </div>
-            {/* When you have an image, replace the placeholder div above with: */}
-            {/* <img
-              src="/path-to-your-image.jpg"
-              alt="Welcome"
-              className="w-full h-full object-cover"
-            /> */}
-          </div>
+      {/* overflow-hidden keeps the photo inside the modal's rounded corners */}
+      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-3xl max-h-[85vh] overflow-hidden overflow-y-auto p-0 bg-white border-gray-200">
+        {/* items-center keeps the shorter of the two columns centred against the
+            taller one, so the photo can stay at its own aspect ratio */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+          {/* Left Side - Studio portrait, shown whole rather than cropped to fill
+              the column: the image sets its own height at its natural 4:3 */}
+          <img
+            src={aboutUs}
+            alt="Brand& studio"
+            className="w-full h-auto"
+          />
 
           {/* Right Side - Text Content */}
           <div className="p-block sm:p-stack flex flex-col justify-between gap-block">

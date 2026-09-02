@@ -19,8 +19,8 @@ const projectData: ProjectData = {
   // instagram: "https://www.instagram.com/<handle>/",
   images: [
     // Left column (column: 1) and right column (column: 2).
-    // rowSpan reserves ~150px per unit before the image loads - keep it at or
-    // below the image's real height so no empty gap appears underneath:
+    // Images always render at their natural aspect ratio; rowSpan only shapes
+    // the placeholder held while the file loads, so match the image:
     //   landscape 3:2 -> 2   landscape 4:3 -> 3   square -> 4   portrait -> 5
     // { src: image1, alt: "Image 1", rowSpan: 4, column: 1 },
     // { src: image2, alt: "Image 2", rowSpan: 2, column: 2 },

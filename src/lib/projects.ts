@@ -4,10 +4,14 @@
 
 import alMokhtarThumb from "@/assets/portfolio/AlMukhtar.webp";
 import valorThumb from "@/assets/projects/valor/flags.webp";
+import dimmiThumb from "@/assets/projects/dimmi/stacked-boxes.webp";
+import riseThumb from "@/assets/projects/rise/espresso-cups.webp";
+import unboxThumb from "@/assets/projects/unbox/brochure-stationery.webp";
 import lovinThymeThumb from "@/assets/projects/lovin-thyme/mankoushe-packaging.webp";
 import mindClinicsThumb from "@/assets/projects/mind-clinics/clinic-window.webp";
 import cortinaThumb from "@/assets/projects/cortina/sandwich-sky.webp";
 import domaineDesCedresThumb from "@/assets/projects/domaine-des-cedres/bottle-in-olives.webp";
+import eggsWithBenefitsThumb from "@/assets/projects/eggs-with-benefits/brand-illustration.webp";
 import forthAndGyftedThumb from "@/assets/projects/forth-and-gyfted/storefront-sign.webp";
 import lesDouceursDeNawalThumb from "@/assets/projects/les-douceurs-de-nawal/shopping-bag.webp";
 import mahmoudRasmiThumb from "@/assets/projects/mahmoud-rasmi/notebook-granada.webp";
@@ -44,6 +48,27 @@ export const projects: ProjectSummary[] = [
     inPortfolioGrid: true,
   },
   {
+    slug: "dimmi",
+    title: "Dimmi - Global",
+    path: "/projects/dimmi",
+    thumbnail: dimmiThumb,
+    inPortfolioGrid: true,
+  },
+  {
+    slug: "rise",
+    title: "Rise - Lebanon",
+    path: "/projects/rise",
+    thumbnail: riseThumb,
+    inPortfolioGrid: true,
+  },
+  {
+    slug: "unbox",
+    title: "Unbox - Dubai",
+    path: "/projects/unbox",
+    thumbnail: unboxThumb,
+    inPortfolioGrid: true,
+  },
+  {
     slug: "lovin-thyme",
     title: "Lovin'thyme - London, UK",
     path: "/projects/lovin-thyme",
@@ -69,6 +94,13 @@ export const projects: ProjectSummary[] = [
     title: "Domaine des Cèdres - Jezzine, Lebanon",
     path: "/projects/domaine-des-cedres",
     thumbnail: domaineDesCedresThumb,
+    inPortfolioGrid: false,
+  },
+  {
+    slug: "eggs-with-benefits",
+    title: "Eggs with Benefits",
+    path: "/projects/eggs-with-benefits",
+    thumbnail: eggsWithBenefitsThumb,
     inPortfolioGrid: false,
   },
   {

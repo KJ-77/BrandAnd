@@ -11,10 +11,14 @@ import { NotFoundPage } from "./pages/not-found";
 // Project case studies - keep in the same order as src/lib/projects.ts
 import { AlMokhtar } from "./pages/al-mokhtar";
 import { Valor } from "./pages/valor";
+import { Dimmi } from "./pages/dimmi";
+import { Rise } from "./pages/rise";
+import { Unbox } from "./pages/unbox";
 import { LovinThyme } from "./pages/lovin-thyme";
 import { MindClinics } from "./pages/mind-clinics";
 import { Cortina } from "./pages/cortina";
 import { DomaineDesCedres } from "./pages/domaine-des-cedres";
+import { EggsWithBenefits } from "./pages/eggs-with-benefits";
 import { ForthAndGyfted } from "./pages/forth-and-gyfted";
 import { LesDouceursDeNawal } from "./pages/les-douceurs-de-nawal";
 import { MahmoudRasmi } from "./pages/mahmoud-rasmi";
@@ -38,12 +42,19 @@ const App = () => {
           {/* Project case studies */}
           <Route path="/projects/al-mokhtar" element={<AlMokhtar />} />
           <Route path="/projects/valor" element={<Valor />} />
+          <Route path="/projects/dimmi" element={<Dimmi />} />
+          <Route path="/projects/rise" element={<Rise />} />
+          <Route path="/projects/unbox" element={<Unbox />} />
           <Route path="/projects/lovin-thyme" element={<LovinThyme />} />
           <Route path="/projects/mind-clinics" element={<MindClinics />} />
           <Route path="/projects/cortina" element={<Cortina />} />
           <Route
             path="/projects/domaine-des-cedres"
             element={<DomaineDesCedres />}
+          />
+          <Route
+            path="/projects/eggs-with-benefits"
+            element={<EggsWithBenefits />}
           />
           <Route
             path="/projects/forth-and-gyfted"
