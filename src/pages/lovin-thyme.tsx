@@ -14,7 +14,7 @@ const projectData: ProjectData = {
   description:
     "Brand& developed the identity for Lovin'thyme, a brand created to bring the warmth and familiarity of Lebanese cuisine into the rhythm of modern life. Designed for busy individuals and families, the brand offers convenient, straightforward meal solutions without compromising on the essence of home cooking. Its focus on flexibility, practicality, and extended storage makes Lebanese meals easier to enjoy, anytime and anywhere.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/C4FrFjusuhw/",
   images: [
     // Left column
     { src: brandIllustration, alt: "Lovin'thyme brand illustration", rowSpan: 4, column: 1 },

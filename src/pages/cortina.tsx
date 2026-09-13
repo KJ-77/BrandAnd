@@ -17,7 +17,7 @@ const projectData: ProjectData = {
   description:
     "Brand& developed the identity for Cortina, an ice cream brand that brings a playful yet refined character to the world of indulgence. The visual identity combines distinctive typography, vibrant elements, and a sense of nostalgia to create a brand that feels both familiar and contemporary. Designed to stand out while capturing the joy of ice cream, Cortina's identity creates a memorable and inviting experience across every touchpoint.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DN73Pa4jBBx/",
   images: [
     // Left column
     { src: sandwichSky, alt: "Cortina ice cream sandwich against the sky", rowSpan: 5, column: 1 },

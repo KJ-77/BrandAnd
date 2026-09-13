@@ -19,7 +19,7 @@ const projectData: ProjectData = {
     "Unbox is an award-winning workspace in Business Bay, Dubai, and Brand& gave it an identity with the same idea at its centre: a box opened up, unfolded into planes and stairs that never quite sit where you expect them to.",
     "That geometry runs through everything — the faceted mark, the angular business cards and tags, the brochure and the environmental graphics — held together by a warm taupe and gold palette that carries the line \"Accomplish the Unthinkable\" from print to the building itself.",
   ],
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DJRiAiHMi_w/",
   bannerImage: banner,
   images: [
     // Left column

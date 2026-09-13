@@ -13,7 +13,7 @@ const projectData: ProjectData = {
   description:
     "Brand& developed the visual identity for Mahmoud Rasmi, a consultant specializing in culture and tourism. The logo is built around his initials, transformed into a distinctive icon through geometric forms inspired by cultural artifacts, including arches and squares. The resulting identity brings together heritage and contemporary design, creating a visual language that reflects Mahmoud's work while establishing a memorable and cohesive presence across all brand touchpoints.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/CpNLRrTM_T2/",
   images: [
     // Left column
     { src: notebookGranada, alt: "Mahmoud Rasmi embossed notebook", rowSpan: 4, column: 1 },

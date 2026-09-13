@@ -20,7 +20,7 @@ const projectData: ProjectData = {
     "Zad — Eat Real. أكل حقيقي.",
   ],
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/Dc3KoUvMdQ3/",
   images: [
     // Left column
     { src: packagingRange, alt: "Zad packaging range on a service tray", rowSpan: 3, column: 1 },

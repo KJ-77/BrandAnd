@@ -24,7 +24,7 @@ const projectData: ProjectData = {
     "At Brand&, we didn't just brand a food concept. We built a world around it. From strategy and positioning to the visual identity, tone of voice, colors, graphics, and overall brand experience, we translated the spirit of these two cultures into something fresh, playful, and unmistakably SAJPAN.",
   ],
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DcOHRGyjHLw/",
   images: [
     // Left column
     { src: menuCheckered, alt: "SAJPAN menu on the brand's checkered pattern", rowSpan: 3, column: 1 },

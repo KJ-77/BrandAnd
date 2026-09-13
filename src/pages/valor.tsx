@@ -15,7 +15,7 @@ const projectData: ProjectData = {
   description:
     "Brand& developed a refined visual identity for Valor, combining an elegant typeface with a strong symbolic mark that reflects professionalism, prestige, and strength. Inspired by steel's durability and versatility within the construction industry, the identity balances boldness with sophistication. Simplified forms, considered typography, negative space, and a refined color palette come together to create a distinctive brand that communicates Valor's core qualities of strength, bravery, and balance.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/C6svgpNMfuf/",
   images: [
     // Left column
     { src: flags, alt: "Valor Collective flags", rowSpan: 2, column: 1 },

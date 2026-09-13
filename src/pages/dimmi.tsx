@@ -16,7 +16,7 @@ const projectData: ProjectData = {
     "Brand& shaped Dimmi into a quiet, tactile lifestyle brand — a soft rounded wordmark, a muted palette and a monochrome material story that lets the product do the talking.",
     "The identity was built to travel across categories, from high-end loungewear to home fragrance, without ever raising its voice. Hang tags, mailer boxes, candle packaging and shopping bags all sit on the same restrained system of warm neutrals, generous space and considered light.",
   ],
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DLhgSFqsHGL/",
   bannerImage: banner,
   images: [
     // Left column

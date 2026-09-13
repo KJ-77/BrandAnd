@@ -17,6 +17,7 @@ import lesDouceursDeNawalThumb from "@/assets/projects/les-douceurs-de-nawal/sho
 import mahmoudRasmiThumb from "@/assets/projects/mahmoud-rasmi/notebook-granada.webp";
 import matterlabThumb from "@/assets/projects/matterlab/material-samples.webp";
 import sajpanThumb from "@/assets/projects/sajpan/menu-checkered.webp";
+import safranDuLibanThumb from "@/assets/projects/safran-du-liban/saffron-tins.webp";
 import twigoThumb from "@/assets/projects/twigo/billboard.webp";
 import zadThumb from "@/assets/projects/zad/packaging-range.webp";
 
@@ -136,6 +137,13 @@ export const projects: ProjectSummary[] = [
     title: "SAJPAN - Chicago",
     path: "/projects/sajpan",
     thumbnail: sajpanThumb,
+    inPortfolioGrid: false,
+  },
+  {
+    slug: "safran-du-liban",
+    title: "Safran du Liban - Beirut, Lebanon",
+    path: "/projects/safran-du-liban",
+    thumbnail: safranDuLibanThumb,
     inPortfolioGrid: false,
   },
   {

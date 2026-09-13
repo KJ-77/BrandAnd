@@ -21,7 +21,7 @@ const projectData: ProjectData = {
     "Twigo. Wherever you go.",
   ],
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/Da0DJE_jNx7/",
   images: [
     // Left column
     { src: billboard, alt: "Twigo billboard campaign", rowSpan: 5, column: 1 },

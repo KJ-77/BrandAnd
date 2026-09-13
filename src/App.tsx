@@ -24,6 +24,7 @@ import { LesDouceursDeNawal } from "./pages/les-douceurs-de-nawal";
 import { MahmoudRasmi } from "./pages/mahmoud-rasmi";
 import { Matterlab } from "./pages/matterlab";
 import { Sajpan } from "./pages/sajpan";
+import { SafranDuLiban } from "./pages/safran-du-liban";
 import { Twigo } from "./pages/twigo";
 import { Zad } from "./pages/zad";
 
@@ -67,6 +68,10 @@ const App = () => {
           <Route path="/projects/mahmoud-rasmi" element={<MahmoudRasmi />} />
           <Route path="/projects/matterlab" element={<Matterlab />} />
           <Route path="/projects/sajpan" element={<Sajpan />} />
+          <Route
+            path="/projects/safran-du-liban"
+            element={<SafranDuLiban />}
+          />
           <Route path="/projects/twigo" element={<Twigo />} />
           <Route path="/projects/zad" element={<Zad />} />
 

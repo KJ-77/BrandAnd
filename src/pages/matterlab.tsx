@@ -14,7 +14,7 @@ const projectData: ProjectData = {
   description:
     "Brand& developed the identity for Matterlab, a brand built around curiosity, experimentation, and the transformation of ideas into tangible experiences. The visual language reflects a balance between precision and creativity, giving the brand a distinctive and contemporary character. Through a considered identity system, Matterlab communicates a spirit of exploration while remaining clear, intelligent, and approachable.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DOvzR8HDIy6/",
   images: [
     // Left column
     { src: materialSamples, alt: "Matterlab material samples", rowSpan: 5, column: 1 },

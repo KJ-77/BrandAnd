@@ -72,7 +72,12 @@ export interface ProjectData {
   description: string | string[];
   bannerImage: string;
   images: ProjectImage[];
-  /** Full Instagram URL. The follow button is hidden when this is omitted. */
+  /**
+   * Full Instagram URL - either a brand profile or, more often, the post about
+   * the project on the Brand& page (most of these brands have no account of
+   * their own). The button is hidden when this is omitted, and its label
+   * follows the kind of link - see the button below.
+   */
   instagram?: string;
 }
 
@@ -165,7 +170,13 @@ export function ProjectLayout({ project }: ProjectLayoutProps) {
                   className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors rounded-none"
                 >
                   <Instagram size={20} />
-                  <span>Follow on Instagram</span>
+                  {/* A `/p/` link is a single post, so "Follow" would be wrong -
+                      only a profile link is something you can follow */}
+                  <span>
+                    {project.instagram.includes("/p/")
+                      ? "See it on Instagram"
+                      : "Follow on Instagram"}
+                  </span>
                 </a>
               </div>
             )}

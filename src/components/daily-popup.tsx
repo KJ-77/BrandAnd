@@ -6,7 +6,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import aboutUs from "@/assets/about/about-us.webp";
+// The welcome image is the Safran du Liban hero shot - shared with that case
+// study rather than duplicated, so swapping it here is a one-line import change.
+import welcomeImage from "@/assets/projects/safran-du-liban/saffron-tins.webp";
 
 export function DailyPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,16 +31,20 @@ export function DailyPopup() {
           it would run past 85% of the screen, so nothing gets clipped. */}
       {/* overflow-hidden keeps the photo inside the modal's rounded corners */}
       <DialogContent className="w-[calc(100%-2rem)] sm:max-w-3xl max-h-[85vh] overflow-hidden overflow-y-auto p-0 bg-white border-gray-200">
-        {/* items-center keeps the shorter of the two columns centred against the
-            taller one, so the photo can stay at its own aspect ratio */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
-          {/* Left Side - Studio portrait, shown whole rather than cropped to fill
-              the column: the image sets its own height at its natural 4:3 */}
-          <img
-            src={aboutUs}
-            alt="Brand& studio"
-            className="w-full h-auto"
-          />
+        {/* Default `items-stretch`: both columns take the height of the taller
+            one, so the photo fills its half instead of floating in white space */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {/* Left Side - the photo. On mobile it is a full-width band at the
+              image's own 3:2, so nothing is cropped; from md up the wrapper is
+              stretched to the height of the copy column and the image covers it,
+              which is the only way two columns of different content can line up. */}
+          <div className="aspect-[3/2] md:aspect-auto">
+            <img
+              src={welcomeImage}
+              alt="Safran du Liban saffron tins"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           {/* Right Side - Text Content */}
           <div className="p-block sm:p-stack flex flex-col justify-between gap-block">

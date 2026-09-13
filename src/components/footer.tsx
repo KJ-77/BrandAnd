@@ -188,7 +188,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-gray-400 text-base lg:text-xl lg:col-span-2 lg:col-start-11 lg:mt-24">
 
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/brand.and/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors flex items-center gap-2"
@@ -197,7 +197,7 @@ export function Footer() {
               <span>instagram</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/lama-ramadan-42353930/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors flex items-center gap-2"

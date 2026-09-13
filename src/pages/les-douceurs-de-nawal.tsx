@@ -17,7 +17,7 @@ const projectData: ProjectData = {
     "Just like every chocolate tells a story, the brand now speaks with a refined voice; one that celebrates craft, imagination, and the magic of cocoa. 🍫",
   ],
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DWRcPoVDPzU/",
   images: [
     // Left column
     { src: logoIllustration, alt: "Les Douceurs de Nawal illustrated logo", rowSpan: 5, column: 1 },

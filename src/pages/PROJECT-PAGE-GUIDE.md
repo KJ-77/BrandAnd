@@ -57,10 +57,16 @@ const projectData: ProjectData = {
   title: "Project Name - Country",
   description: "Single paragraph...",        // or ["Para one...", "Para two..."]
   bannerImage: banner,
-  instagram: "https://www.instagram.com/handle/",  // optional
+  instagram: "https://www.instagram.com/p/<post-id>/",  // optional
   images: [ /* see below */ ],
 };
 ```
+
+Most of these brands have no Instagram account of their own, so this is usually
+a link to the post about the project on the Brand& page rather than a profile.
+The button reads "See it on Instagram" for a `/p/` post link and "Follow on
+Instagram" for a profile, and it is hidden entirely when the field is omitted -
+leave the line commented out if there is no link yet.
 
 ### Step 5: Configure Your Images
 For each image, specify:

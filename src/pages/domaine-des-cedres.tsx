@@ -15,7 +15,7 @@ const projectData: ProjectData = {
   description:
     "Domaine des Cèdres is a Lebanese olive oil brand rooted in tradition and craftsmanship, bringing together authentic heritage and refined elegance. Every detail tells a story, from the olive oil-making process to the celebration of quality, tradition, and craftsmanship. The identity captures the beauty of elevated production through a cohesive, rustic visual language rooted in authenticity and heritage.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/DTORPufjE6x/",
   images: [
     // Left column
     { src: bottleInOlives, alt: "Domaine des Cèdres bottle resting in freshly picked olives", rowSpan: 5, column: 1 },

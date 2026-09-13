@@ -18,7 +18,7 @@ const projectData: ProjectData = {
   description:
     "Brand& designed the logo for MIND, a mental health institution recognized for its longevity and excellence. The identity combines bold typography with a distinctive red color palette, creating a confident and memorable visual presence. The cohesive design reinforces MIND's established reputation while bringing a contemporary, recognizable character to the brand.",
   bannerImage: banner,
-  // instagram: "https://www.instagram.com/<handle>/",
+  instagram: "https://www.instagram.com/p/C3SmrYFMRle/",
   images: [
     // Left column
     { src: clinicWindow, alt: "MIND Clinics window signage", rowSpan: 3, column: 1 },
