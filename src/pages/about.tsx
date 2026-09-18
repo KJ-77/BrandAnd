@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import upperShot from "@/assets/about/upper-shot.webp";
+import teamImage from "@/assets/about/team.webp";
 import chainImage from "@/assets/about/chain.png";
 
 export function AboutPage() {
@@ -92,15 +93,26 @@ export function AboutPage() {
       <section ref={philosophyRef} className="py-section lg:py-section-lg">
         {/* Split Layout: Left (Image) and Right (Text) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-stack lg:gap-4 px-6 lg:px-16 xl:px-80">
-          {/* Left Side - Chain Image at Bottom */}
+          {/* Left Side - Studio Photo on Top, Chain Image at Bottom */}
           <div
-            className={`relative flex items-end justify-start transition-all duration-1000 delay-200 ${
+            className={`flex flex-col gap-stack transition-all duration-1000 delay-200 ${
               isPhilosophyVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"
             }`}
           >
-            <div className="w-full max-w-[180px] lg:max-w-[280px]">
+            <img
+              src={teamImage}
+              alt="The Brand& team in conversation over coffee"
+              className="w-full h-auto"
+              loading="lazy"
+            />
+
+            {/* mt-auto keeps the chain pinned to the bottom of the column the way
+                it was before the photo moved in above it. The column stretches to
+                the height of the taller text column beside it, so on desktop this
+                is what drops the chain level with the end of the copy. */}
+            <div className="w-full max-w-[180px] lg:max-w-[280px] mt-auto">
               <img
                 src={chainImage}
                 alt="Chain"

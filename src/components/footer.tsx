@@ -71,7 +71,7 @@ export function Footer() {
       {/* Top Section - Large Nav Items */}
       <div className="container mx-auto px-6 py-section lg:py-section-lg">
         <div className="flex flex-col items-center gap-block lg:gap-stack">
-          {/* Projects | Image | Team Row - the type scales down on small screens
+          {/* Projects | Image | Culture Row - the type scales down on small screens
               so the row never runs past the edge of the phone */}
           <div
             ref={projectsRef}
@@ -96,7 +96,7 @@ export function Footer() {
               to="/about"
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight hover:opacity-70 transition-opacity uppercase"
             >
-              TEAM
+              CULTURE
             </Link>
           </div>
 
