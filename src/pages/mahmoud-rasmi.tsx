@@ -9,7 +9,7 @@ import businessCardsGrid from "@/assets/projects/mahmoud-rasmi/business-cards-gr
 
 const projectData: ProjectData = {
   slug: "mahmoud-rasmi",
-  title: "Mahmoud Rasmi - Salamanca, Spain",
+  title: "Mahmoud Rasmi - Spain",
   description:
     "Brand& developed the visual identity for Mahmoud Rasmi, a consultant specializing in culture and tourism. The logo is built around his initials, transformed into a distinctive icon through geometric forms inspired by cultural artifacts, including arches and squares. The resulting identity brings together heritage and contemporary design, creating a visual language that reflects Mahmoud's work while establishing a memorable and cohesive presence across all brand touchpoints.",
   bannerImage: banner,

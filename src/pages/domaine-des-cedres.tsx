@@ -11,7 +11,7 @@ import oliveHarvest from "@/assets/projects/domaine-des-cedres/olive-harvest.web
 
 const projectData: ProjectData = {
   slug: "domaine-des-cedres",
-  title: "Domaine des Cèdres - Jezzine, Lebanon",
+  title: "Domaine des Cèdres - Lebanon",
   description:
     "Domaine des Cèdres is a Lebanese olive oil brand rooted in tradition and craftsmanship, bringing together authentic heritage and refined elegance. Every detail tells a story, from the olive oil-making process to the celebration of quality, tradition, and craftsmanship. The identity captures the beauty of elevated production through a cohesive, rustic visual language rooted in authenticity and heritage.",
   bannerImage: banner,

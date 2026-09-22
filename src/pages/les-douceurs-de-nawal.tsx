@@ -10,7 +10,7 @@ import monkeyIllustration from "@/assets/projects/les-douceurs-de-nawal/monkey-i
 
 const projectData: ProjectData = {
   slug: "les-douceurs-de-nawal",
-  title: "Les Douceurs de Nawal - Beirut, Lebanon",
+  title: "Les Douceurs de Nawal - Lebanon",
   description: [
     "A new chapter for Les Douceurs de Nawal, reimagined by Brand&.",
     "Handcrafted by Nawal, these artisanal chocolates now carry an identity that reflects their essence: detailed hand-drawn illustrations full of whimsy, earthy tones blended with warm cocoa hues, and typography that marries timeless elegance with a touch of fantasy.",

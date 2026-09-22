@@ -15,7 +15,7 @@ import hulaHoopChicken from "@/assets/projects/eggs-with-benefits/hula-hoop-chic
 
 const projectData: ProjectData = {
   slug: "eggs-with-benefits",
-  title: "Eggs with Benefits",
+  title: "Eggs with Benefits - Lebanon",
   description: [
     "At Brand&, we created a playful packaging identity that turns the everyday egg into something full of personality. Through hand-drawn typography, quirky illustrated characters, and soft pops of color, we made nutrition feel approachable, joyful, and memorable.",
     "The result is a distinctive visual world where every egg has a little character — bringing together wholesome benefits with a fresh, unexpected sense of fun.",

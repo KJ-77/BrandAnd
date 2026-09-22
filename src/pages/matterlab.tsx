@@ -10,7 +10,7 @@ import brochurePoster from "@/assets/projects/matterlab/brochure-poster.webp";
 
 const projectData: ProjectData = {
   slug: "matterlab",
-  title: "Matterlab - Beirut, Lebanon",
+  title: "Matterlab - Lebanon",
   description:
     "Brand& developed the identity for Matterlab, a brand built around curiosity, experimentation, and the transformation of ideas into tangible experiences. The visual language reflects a balance between precision and creativity, giving the brand a distinctive and contemporary character. Through a considered identity system, Matterlab communicates a spirit of exploration while remaining clear, intelligent, and approachable.",
   bannerImage: banner,

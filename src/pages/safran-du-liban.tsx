@@ -11,7 +11,7 @@ import reedDiffuser from "@/assets/projects/safran-du-liban/reed-diffuser.webp";
 
 const projectData: ProjectData = {
   slug: "safran-du-liban",
-  title: "Safran du Liban - Beirut, Lebanon",
+  title: "Safran du Liban - Lebanon",
   // Copy is the client's own, from local/new project/Safran du Liban.docx
   description: [
     "This direction positions Safran du Liban as a refined expression of Lebanese heritage, bringing together the richness of the land with a more elevated, premium brand language. Rather than relying on traditional cues alone, the identity transforms Lebanese nature, flora, fauna, and cultural references into a distinctive visual world.",
