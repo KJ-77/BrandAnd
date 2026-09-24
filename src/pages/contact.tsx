@@ -149,7 +149,7 @@ export function ContactPage() {
               <div className="space-y-tight text-white text-lg lg:text-2xl">
                 <p>Rue du Liban, Ashrafieh Beirut Lebanon</p>
                 <p>m: +961 3 667160</p>
-                <p>e: lama@brandandand.group</p>
+                <p>e: lama@brandand.group</p>
               </div>
             </div>
 
